@@ -62,6 +62,11 @@ set nowritebackup
 set noswapfile
 
 """""""""""""""
+"" Clipboard
+"""""""""""""""
+set clipboard=unnamed
+
+"""""""""""""""
 "" Status bar
 """""""""""""""
 
@@ -115,6 +120,8 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
+Bundle 'ecomba/vim-ruby-refactoring'
+
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
@@ -127,10 +134,12 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Haml'
 Bundle 'less'
-Bundle 'minibufexplorerpp'
+Bundle 'Better-Javascript-Indentation'
+" Bundle 'minibufexplorerpp'
 Bundle 'taglist.vim'
 Bundle 'surround.vim'
 Bundle 'github-theme'
+Bundle 'The-NERD-tree'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
