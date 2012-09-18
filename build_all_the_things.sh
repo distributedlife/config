@@ -18,5 +18,6 @@ echo "install sykpe"
 echo "install steam"
 echo "install dropbox"
 echo "install vlc"
+echo "install android SDK"
 
 brew doctor
