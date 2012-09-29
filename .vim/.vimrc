@@ -127,7 +127,16 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
-
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tfnico/vim-gradle'
+Bundle 'vim-scripts/groovy.vim'
+Bundle "distributedlife/vim-javascript"
+Bundle 'vim-scripts/IndentAnything'
+Bundle 'vim-scripts/jsbeautify'
+Bundle 'joestelmach/lint.vim'
+Bundle 'claco/jasmine.vim'
+Bundle 'nono/github_vim_theme'
+Bundle 'groenewege/vim-less'
 
 " vim-scripts repos
 Bundle 'L9'
@@ -138,15 +147,12 @@ Bundle 'Better-Javascript-Indentation'
 " Bundle 'minibufexplorerpp'
 Bundle 'taglist.vim'
 Bundle 'surround.vim'
-Bundle 'github-theme'
 Bundle 'The-NERD-tree'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
 
-" this has to be after vundle
-colorscheme github
 
 
 
