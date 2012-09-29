@@ -191,6 +191,19 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 
 
+"Higlight current line only in insert mode
+autocmd InsertLeave * set nocursorline
+autocmd InsertEnter * set cursorline
+
+"Highlight cursor
+highlight CursorLine ctermbg=LightGrey cterm=NONE
+
+
+
+" Coffee folding
+au BufNewFile,BufReadPost *.js setl foldmethod=indent nofoldenable
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
 " RSPEC
 filetype plugin indent on     " required! 
 "
@@ -202,18 +215,3 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
-
-" Execute open rspec buffer
-" Thanks to Ian Smith-Heisters
-function! RunSpec(args)
-  if exists("b:rails_root") && filereadable(b:rails_root . "/script/spec")
-    let spec = b:rails_root . "/script/rspec"
-  else
-    let spec = "bundle exec rspec"
-  end
-  let cmd = ":! " . spec . " % -cfn " . a:args
-  execute cmd
-endfunction
-
-map !s :call RunSpec("-l " . <C-r>=line('.')<CR>)
-map !S :call RunSpec("")
