@@ -9,9 +9,9 @@ brew install postgres
 echo "install rvm"
 rvm pkg install openssl
 brew install node
-xcodebuild -license
-brew install autoconf automake apple-gcc42
-brew install qmake
+brew install autoconf automake
+brew install [flags] https://raw.github.com/Homebrew/homebrew-dupes/master/gcc.rb
+brew install qt
 
 echo "install adium"
 echo "install chrome"
@@ -20,7 +20,6 @@ echo "install steam"
 echo "install dropbox"
 echo "install vlc"
 echo "install android SDK"
+echo "setup new ssh keys"
 
 brew doctor
-git config --global color.ui true
-
