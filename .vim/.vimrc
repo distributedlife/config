@@ -47,6 +47,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " Ignore bundler and sass cache
 set wildignore+=vendor/gems/*,vendor/cache/*,.bundle/*,.sass-cache/*,doc/**,tmp/**
 
+" Ignore build folder
+set wildignore+=build/**
+
 """"""""""""""""""""""""""""
 "" Undo and command history
 """"""""""""""""""""""""""""
@@ -82,11 +85,7 @@ if has("statusline") && !&cp
   " Finish the statusline
   set statusline+=\ \ Line:%l/%L[%p%%]
   set statusline+=\ \ Col:%v
-  set statusline+=\ \ Buf:#%n
   set statusline+=\ \ [%b][0x%B]
-  
-  " Add fugitive
-  set statusline+=\ \ %{fugitive#statusline()}
 endif
 
 """""""""""""""""""""""
@@ -124,6 +123,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 
 
 Bundle 'kien/ctrlp.vim'
+let g:ctrlp_custom_ignore = '\v[\/]build'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
@@ -203,6 +203,11 @@ highlight CursorLine ctermbg=LightGrey cterm=NONE
 " Coffee folding
 au BufNewFile,BufReadPost *.js setl foldmethod=indent nofoldenable
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+au BufNewFile,BufReadPost *.rb setl foldmethod=indent nofoldenable
+
+
+" HAML Tabs
+au! FileType haml set noet
 
 " RSPEC
 filetype plugin indent on     " required! 
